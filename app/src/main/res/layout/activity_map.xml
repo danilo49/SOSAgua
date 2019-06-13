@@ -1,0 +1,24 @@
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.danilo.sosagua.MapActivity">
+
+    <Button
+        android:id="@+id/btnDenuncia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:alpha="0.5"
+        android:background="@color/colorAccent"
+        android:fontFamily="sans-serif"
+        android:padding="10dp"
+        android:text="Efetuar denúncia"
+        android:textColor="@color/wallet_secondary_text_holo_dark" />
+
+    </fragment>

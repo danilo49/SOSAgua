@@ -9,6 +9,7 @@
         <item> Capitação Irregular </item>
         <item> Poluição dos Recursos Hídricos </item>
         <item> Perfuração de Poço Artesiano Irregular </item>
+        <item> Outros </item>
     </string-array>
 
     <string-array name="etaria">
@@ -20,7 +21,7 @@
 
     <string-array name="imovel">
         <item> Comercial </item>
-        <item> Domiciliar </item>
+        <item> Residencial </item>
         <item> Industrial </item>
         <item> Outros </item>
     </string-array>

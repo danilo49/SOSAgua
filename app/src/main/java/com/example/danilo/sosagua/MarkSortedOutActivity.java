@@ -174,7 +174,7 @@ public class MarkSortedOutActivity extends AppCompatActivity implements OnMapRea
         final denunciadb denuncia = new denunciadb(getBaseContext());
         int tam = denuncia.verificaCodigoResolvido();
         List<Denuncia> lista = denuncia.denuncias();
-
+        final List<Denuncia> lista2 = denuncia.denuncias();
 
 
         if (tam > 0) {
@@ -183,11 +183,13 @@ public class MarkSortedOutActivity extends AppCompatActivity implements OnMapRea
                 if (mMap != null) {
                     if(d.getSituacao().equals("Resolvido")) {
                         Log.d(TAG, "salvar: TESTANDO SITUACAO");
-                        mMap.addMarker(new MarkerOptions().position(mark).title(d.getCategoria()).snippet("Denúncia resolvida." +"Código da denúncia: "
+                        mMap.addMarker(new MarkerOptions().position(mark).title("Clique aqui para confirmar a resolução da denúncia").snippet("Código da denúncia: "
                                 +  d.getCodigo()).draggable(false).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
 
                         Intent intent = new Intent(MarkSortedOutActivity.this, UserInfoWindowAdapter.class);
                         mMap.setInfoWindowAdapter(new UserInfoWindowAdapter(getLayoutInflater(),intent,this));
+
+
                     }
                 }
             }
@@ -198,7 +200,30 @@ public class MarkSortedOutActivity extends AppCompatActivity implements OnMapRea
         {
             @Override
             public void onInfoWindowClick(Marker arg0) {
+                for(Denuncia d : lista2) {
+                    String id = arg0.getId().substring(1);
+                    int id1 = Integer.parseInt(id)+1;
+                    id = Integer.toString(id1);
 
+                    if(id.equals(Integer.toString(d.getCodigo()))) {
+
+                        Bundle args = new Bundle();
+                        args.putInt("cod", d.getCodigo());
+                        args.putString("eta",d.getEtaria());
+                        args.putString("cat",d.getCategoria());
+                        args.putString("imo",d.getImovel());
+                        args.putString("desc",d.getDescricao());
+                        args.putString("sit",d.getSituacao());
+                        args.putString("dat",d.getData());
+                        args.putDouble("lat",d.getLatitude());
+                        args.putDouble("lon",d.getLongitude());
+                        //args.putString("dat2", d.getData2());
+
+                        Intent intent = new Intent(MarkSortedOutActivity.this, confirmarResolucao.class);
+                        intent.putExtra("changeComplaint",args);
+                        startActivity(intent);
+                    }
+                }
             }
         });
     }

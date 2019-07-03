@@ -189,7 +189,7 @@ public class MarksActivity extends AppCompatActivity implements OnMapReadyCallba
 
 
     public void salvar() {
-        Log.d(TAG, "TESTEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEO");
+
         final denunciadb denuncia = new denunciadb(getBaseContext());
         int tam = denuncia.verificaCodigoPendente();
         List<Denuncia> lista = denuncia.denuncias();
@@ -201,8 +201,8 @@ public class MarksActivity extends AppCompatActivity implements OnMapReadyCallba
                 LatLng mark = new LatLng(d.getLatitude(), d.getLongitude());
                 if (mMap != null) {
                    if(d.getSituacao().equals("Pendente")) {
-                       Log.d(TAG, "salvar: TESTANDO SITUACAO");
-                       mMap.addMarker(new MarkerOptions().position(mark).title(d.getCategoria()).snippet("Clique aqui para alterar." + d.getCodigo()).draggable(false)
+
+                       mMap.addMarker(new MarkerOptions().position(mark).title("Clique para alterar o status da denúncia").snippet("Codigo da denúncia:"+ d.getCodigo()).draggable(false)
                                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
 
                        Intent intent = new Intent(MarksActivity.this, UserInfoWindowAdapter.class);

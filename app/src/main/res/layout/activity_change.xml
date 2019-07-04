@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:background="@drawable/mao"
+    android:background="@drawable/pingos"
     tools:context=".ChangeActivity">
 
     <TextView
@@ -141,6 +141,8 @@
         android:layout_marginBottom="8dp"
         android:text="Não"
         android:button="@drawable/edittext"
+        android:textColor="#FFFFFF"
+        android:background="#D50404"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.035"
@@ -159,6 +161,8 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:text="Sim"
+        android:textColor="#FFFFFF"
+        android:background="#028D11"
         android:button="@drawable/edittext"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -220,7 +224,7 @@
         android:layout_marginBottom="8dp"
         android:gravity="center"
         android:text="Alteração de Status da denúncia"
-        android:textColor="#FFFFFF"
+        android:textColor="#FF0000"
         android:textSize="23sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

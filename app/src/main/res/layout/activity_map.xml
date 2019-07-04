@@ -21,6 +21,6 @@
         android:padding="10dp"
         android:text="Efetuar denúncia"
         android:button="@drawable/edittext"
-        android:textColor="@color/wallet_secondary_text_holo_dark" />
+        android:textColor="#00E5FF" />
 
     </fragment>

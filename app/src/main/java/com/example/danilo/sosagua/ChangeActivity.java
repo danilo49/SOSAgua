@@ -1,11 +1,13 @@
 package com.example.danilo.sosagua;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -50,16 +52,28 @@ public class ChangeActivity extends AppCompatActivity {
         Tsit.setText("Status: " + situacao);
         TextView Timo = (TextView) findViewById(R.id.Timo);
         Timo.setText("Tipo do Imóvel: " + imovel);
-        TextView Tdesc = (TextView) findViewById(R.id.Tdesc);
+        EditText Tdesc = (EditText) findViewById(R.id.Tdesc);
+
         Tdesc.setText(descricao);
-        Tdesc.setMovementMethod(new ScrollingMovementMethod());
+        disableEditText(Tdesc);
+
         TextView Tdata = (TextView) findViewById(R.id.Tdata);
         Tdata.setText("Data: " + data);
 
-
         botoes();
     }
+
+    private void disableEditText(EditText editText) {
+        editText.setFocusable(true);
+        editText.setEnabled(true);
+        editText.setCursorVisible(true);
+        editText.setKeyListener(null);
+        editText.setBackgroundColor(Color.GRAY);
+        editText.setMovementMethod(new ScrollingMovementMethod());
+    }
+
     public void botoes(){
+
         Button NOT = (Button) findViewById(R.id.NOT);
         NOT.setOnClickListener(new View.OnClickListener(){
             @Override

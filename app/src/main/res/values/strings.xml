@@ -6,7 +6,7 @@
     <string-array name="categoria">
         <item> Vazamento </item>
         <item> Desperdício </item>
-        <item> Capitação Irregular </item>
+        <item> Captação Irregular </item>
         <item> Poluição dos Recursos Hídricos </item>
         <item> Perfuração de Poço Artesiano Irregular </item>
         <item> Outros </item>

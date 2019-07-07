@@ -66,7 +66,7 @@
             android:id="@+id/textView14"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="O corpo humano precisa de em média 40ml de água por Kg."
+            android:text="O corpo humano precisa de em média 35ml de água por Kg."
             android:textColor="#000000"
             android:textSize="18sp"
             android:gravity="center"
@@ -94,8 +94,8 @@
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
-            android:layout_marginTop="16dp"
-            android:text="12/05/2015"
+            android:layout_marginTop="8dp"
+            android:text="Data noticia: 12/05/2015"
             android:textColor="#000000"
             android:gravity="center"
             app:layout_constraintTop_toBottomOf="@+id/textView11"
@@ -258,6 +258,8 @@
             android:textColor="#000000"
             android:textSize="17sp"
             android:textStyle="italic"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintBottom_toTopOf="@+id/textView4"
             app:layout_constraintTop_toBottomOf="@+id/textView5"
             app:layout_constraintStart_toStartOf="@id/view4"
             app:layout_constraintEnd_toEndOf="@id/view4"/>
@@ -276,7 +278,6 @@
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="@+id/view4"
             app:layout_constraintStart_toStartOf="@+id/view4"
-            app:layout_constraintTop_toBottomOf="@+id/Tdesc"
             app:layout_constraintBottom_toTopOf="@+id/NOT"
             app:layout_constraintVertical_bias="1"/>
 

@@ -97,12 +97,7 @@ public class DataActivity extends AppCompatActivity implements AdapterView.OnIte
                 SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
                 dataStr = f.format(date);
 
-
                 dataStr2 = null;
-
-                Toast.makeText(parent.getContext(), situacao, Toast.LENGTH_LONG).show();
-
-                /////////
                 denunciadb db = new denunciadb(getBaseContext());
                 sucesso = db.salvar(etaria, categoria, imovel, situacao, descricao, latitude, longitude, dataStr);
 

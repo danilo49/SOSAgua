@@ -16,6 +16,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".confirmarResolucao"></activity>
 
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyB-yMd1WxZRCZIsPNkElt35InCOsOHRbKQ" />
@@ -35,10 +36,26 @@
         </activity>
         <activity android:name=".MapActivity" />
         <activity android:name=".DataActivity" />
-        <activity android:name=".MarksActivity" />
+        <activity
+            android:name=".MarksActivity"
+            android:label="Denúncias Pendentes"
+            android:theme="@style/AppTheme"/>
 
         <activity android:name=".ChangeActivity" />
-        <activity android:name=".MarkSortedOutActivity" />
+        <activity android:name=".MarkSortedOutActivity"
+            android:label="Denúncias Resolvidas"
+            android:theme="@style/AppTheme"/>
+
+
+
+
+
+
+
+
+
+
+
     </application>
 
 </manifest>

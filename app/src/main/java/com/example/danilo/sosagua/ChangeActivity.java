@@ -1,16 +1,19 @@
 package com.example.danilo.sosagua;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.danilo.sosagua.BD.DAO.denunciadb;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -20,7 +23,7 @@ public class ChangeActivity extends AppCompatActivity {
     double latitude,longitude;
     boolean sucesso = false;
 
-
+    String dataText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,24 +45,63 @@ public class ChangeActivity extends AppCompatActivity {
         }
 
 
-        TextView Tcat = (TextView) findViewById(R.id.Tcat);
-        Tcat.setText("Categoria: " + categoria);
-        TextView Teta = (TextView) findViewById(R.id.Teta);
-        Teta.setText("Faixa Etária: "+ etaria);
-        TextView Tsit = (TextView) findViewById(R.id.Tsit);
-        Tsit.setText("Status: " + situacao);
-        TextView Timo = (TextView) findViewById(R.id.Timo);
-        Timo.setText("Tipo do Imóvel: " + imovel);
-        TextView Tdesc = (TextView) findViewById(R.id.Tdesc);
-        Tdesc.setText(descricao);
-        Tdesc.setMovementMethod(new ScrollingMovementMethod());
-        TextView Tdata = (TextView) findViewById(R.id.Tdata);
-        Tdata.setText("Data: " + data);
 
+
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        //String data = "2019-07-16 13:30:23";
+        SimpleDateFormat formats = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        try {
+
+            Date date = formatter.parse(data);
+            //System.out.println(date);
+            //System.out.println(formatter.format(date));
+            //System.out.println(formats.format(date));
+            dataText = formats.format(date);
+            //System.out.println(dataText);
+
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+
+        /*
+
+           // String -> Date
+        SimpleDateFormat.parse(String);
+
+        // Date -> String
+        SimpleDateFormat.format(date);
+         */
+
+
+
+
+        TextView Tcat = (TextView) findViewById(R.id.Tcat);
+        Tcat.setText(categoria);
+        TextView Tsit = (TextView) findViewById(R.id.Tsit);
+        Tsit.setText(situacao);
+        TextView Timo = (TextView) findViewById(R.id.Timo);
+        Timo.setText(imovel);
+        EditText Tdesc = (EditText) findViewById(R.id.Tdesc);
+        Tdesc.setText(descricao);
+        disableEditText(Tdesc);
+        TextView Tdata = (TextView) findViewById(R.id.Tdata);
+        Tdata.setText(dataText);
 
         botoes();
     }
+
+    private void disableEditText(EditText editText) {
+        editText.setFocusable(true);
+        editText.setEnabled(true);
+        editText.setCursorVisible(true);
+        editText.setKeyListener(null);
+        editText.setBackgroundColor(Color.GRAY);
+        editText.setMovementMethod(new ScrollingMovementMethod());
+    }
+
     public void botoes(){
+
         Button NOT = (Button) findViewById(R.id.NOT);
         NOT.setOnClickListener(new View.OnClickListener(){
             @Override

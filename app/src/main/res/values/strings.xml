@@ -1,12 +1,15 @@
 <resources>
     <string name="app_name"> SOS Água - MC </string>
 
+
+
+
     <string name="google_maps_API_key">AIzaSyB-yMd1WxZRCZIsPNkElt35InCOsOHRbKQ</string>
 
     <string-array name="categoria">
         <item> Vazamento </item>
         <item> Desperdício </item>
-        <item> Capitação Irregular </item>
+        <item> Captação Irregular </item>
         <item> Poluição dos Recursos Hídricos </item>
         <item> Perfuração de Poço Artesiano Irregular </item>
         <item> Outros </item>

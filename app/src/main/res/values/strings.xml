@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name"> SOS Água - MC </string>
+
+
+    <string name="Link">
+    <a href="http://bit.ly/2YEKL2D">Link: http://bit.ly/2YEKL2D</a>
+    </string>
+
+
+    <string name="google_maps_API_key">AIzaSyB-yMd1WxZRCZIsPNkElt35InCOsOHRbKQ</string>
+
+    <string-array name="categoria">
+        <item> Vazamento </item>
+        <item> Desperdício </item>
+        <item> Captação Irregular </item>
+        <item> Poluição dos Recursos Hídricos </item>
+        <item> Perfuração de Poço Artesiano Irregular </item>
+        <item> Outros </item>
+    </string-array>
+
+    <string-array name="etaria">
+        <item> até 12 anos </item>
+        <item> 13 ~ 15 anos </item>
+        <item> 16 ~ 18 anos </item>
+        <item> Maiores de 18 anos </item>
+    </string-array>
+
+    <string-array name="imovel">
+        <item> Comercial </item>
+        <item> Residencial </item>
+        <item> Industrial </item>
+        <item> Outros </item>
+    </string-array>
+
+    <string-array name="situacao">
+        <item> Pendente </item>
+        <item> Resolvido </item>
+    </string-array>
+    <string name="title_activity_change">Change</string>
+
+
+</resources>

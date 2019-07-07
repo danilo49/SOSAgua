@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pingos"
+    tools:context=".ChangeActivity"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:alpha="0.3"
+            android:background="#FFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/view5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView6" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:paddingTop="8dp"
+            android:gravity="center"
+            android:text="Alteração de Status da denúncia"
+            android:textAllCaps="true"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/view4"
+            app:layout_constraintStart_toStartOf="@+id/view4" />
+
+        <TextView
+            android:id="@+id/voceSabia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/roboto_thin"
+            android:text="Você Sabia ?"
+            android:textAllCaps="false"
+            android:textColor="#FA0202"
+            android:textColorHighlight="#00F80808"
+            android:textIsSelectable="false"
+            android:textSize="18sp"
+            android:textStyle="italic"
+            app:layout_constraintTop_toBottomOf="@+id/textView6"
+            app:layout_constraintStart_toStartOf="@+id/view4"
+            app:layout_constraintEnd_toEndOf="@+id/view4" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="O corpo humano precisa de em média 35ml de água por Kg."
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/voceSabia"
+            app:layout_constraintStart_toStartOf="@+id/view4"
+            app:layout_constraintEnd_toEndOf="@+id/view4"/>
+
+        <TextView
+            android:id="@+id/link"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/Link"
+            android:textColor="#000000"
+            android:textColorLink="#1F7ADB"
+            app:layout_constraintEnd_toEndOf="@+id/view4"
+            app:layout_constraintStart_toStartOf="@+id/view4"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Data noticia: 12/05/2015"
+            android:textColor="#000000"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/link"
+            app:layout_constraintStart_toStartOf="@+id/view4"
+            app:layout_constraintEnd_toEndOf="@+id/view4" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="24dp"
+            android:text="Categoria: "
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:gravity="start"
+            app:layout_constraintTop_toBottomOf="@+id/textView15"
+            app:layout_constraintStart_toStartOf="@+id/view4" />
+
+        <TextView
+            android:id="@+id/Tcat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="Categoria: "
+            android:textColor="#000000"
+            android:textSize="17sp"
+            app:layout_constraintTop_toTopOf="@+id/textView16"
+            app:layout_constraintBottom_toBottomOf="@+id/textView16"
+            app:layout_constraintEnd_toEndOf="@id/view4"
+            app:layout_constraintStart_toEndOf="@+id/textView16"/>
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Imóvel: "
+            android:textColor="#000000"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/textView16"
+            app:layout_constraintStart_toStartOf="@+id/view4" />
+
+        <TextView
+            android:id="@+id/Timo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="Imovel: "
+            android:textColor="#000000"
+            android:textSize="17sp"
+            app:layout_constraintTop_toTopOf="@+id/textView13"
+            app:layout_constraintBottom_toBottomOf="@+id/textView13"
+            app:layout_constraintEnd_toEndOf="@id/view4"
+            app:layout_constraintStart_toEndOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Status: "
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/textView13"
+            app:layout_constraintStart_toStartOf="@+id/view4" />
+
+        <TextView
+            android:id="@+id/Tsit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="Status: "
+            android:textColor="#000000"
+            android:textSize="17sp"
+            app:layout_constraintTop_toTopOf="@+id/textView12"
+            app:layout_constraintBottom_toBottomOf="@+id/textView12"
+            app:layout_constraintEnd_toEndOf="@id/view4"
+            app:layout_constraintStart_toEndOf="@+id/textView12" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Data: "
+            android:textColor="#000000"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/textView12"
+            app:layout_constraintStart_toStartOf="@+id/view4" />
+
+        <TextView
+            android:id="@+id/Tdata"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="Data: "
+            android:textColor="#000000"
+            android:textSize="17sp"
+            app:layout_constraintTop_toTopOf="@+id/textView10"
+            app:layout_constraintBottom_toBottomOf="@+id/textView10"
+            app:layout_constraintEnd_toEndOf="@id/view4"
+            app:layout_constraintStart_toEndOf="@+id/textView10" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="Descrição da denúncia: "
+            android:textColor="#000000"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="@id/view4"
+            app:layout_constraintTop_toBottomOf="@+id/textView10"/>
+
+        <EditText
+            android:id="@+id/Tdesc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:alpha="0.8"
+            android:background="#CCCCCC"
+            android:inputType="textMultiLine"
+            android:maxLines="10"
+            android:minLines="6"
+            android:scrollbars="vertical"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            android:textStyle="italic"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintBottom_toTopOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            app:layout_constraintStart_toStartOf="@id/view4"
+            app:layout_constraintEnd_toEndOf="@id/view4"/>
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:text="Deseja alterar o Status para resolvido ?"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/view4"
+            app:layout_constraintStart_toStartOf="@+id/view4"
+            app:layout_constraintBottom_toTopOf="@+id/NOT"
+            app:layout_constraintVertical_bias="1"/>
+
+        <Button
+            android:id="@+id/NOT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="#D50404"
+            android:button="@drawable/edittext"
+            android:text="Não"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toTopOf="@+id/view5"
+            app:layout_constraintStart_toStartOf="@+id/view4"/>
+
+        <Button
+            android:id="@+id/YES"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_goneMarginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="#028D11"
+            android:button="@drawable/edittext"
+            android:text="Sim"
+            android:textColor="#FFFFFF"
+            app:layout_constraintTop_toTopOf="@+id/NOT"
+            app:layout_constraintBottom_toBottomOf="@+id/NOT"
+            app:layout_constraintEnd_toEndOf="@+id/view4"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toEndOf="@+id/NOT"/>
+
+        <View
+            android:id="@+id/view5"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

@@ -126,7 +126,7 @@ public class ChangeActivity extends AppCompatActivity {
                 sucesso = db.update(codigo, etaria, categoria, imovel, situacao, descricao, latitude, longitude, data, data2, confiavel);
 
 
-
+                //Toast.makeText(ChangeActivity.this, ""+data2, Toast.LENGTH_SHORT).show();
                 Toast.makeText(ChangeActivity.this, "Status alterado com sucesso!", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(ChangeActivity.this, MainActivity.class);
                 startActivity(intent);

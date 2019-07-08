@@ -187,7 +187,7 @@ public class MarksActivity extends AppCompatActivity implements OnMapReadyCallba
                 if (mMap != null) {
                    if(d.getSituacao().equals("Pendente")) {
 
-                       mMap.addMarker(new MarkerOptions().position(mark).title("Clique para alterar o status da denúncia").snippet("Codigo da denúncia:"+ d.getCodigo()).draggable(false)
+                       mMap.addMarker(new MarkerOptions().position(mark).title("Clique para alterar o status da denúncia").snippet("Categoria: " + d.getCategoria()).draggable(false)
                                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
 
                        Intent intent = new Intent(MarksActivity.this, UserInfoWindowAdapter.class);
